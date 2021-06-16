@@ -1,0 +1,35 @@
+# Relyance Compliance Inspector Configuration
+
+# TODO: Replace text in < > with actual information from your environment
+
+# Product and Repository Metadata
+# Purpose: Useful to slice/dice the Data Inventory and Data Map in Relyance
+repository: exrme18/relyance-test.git
+
+
+# Services and Code Relationship
+# Purpose: Configuration used to ascertain relationship between microservices and code
+# Note: Directory paths are relative to the repository's root directory. 
+# Note: Need a separate entry for each microservice. See example
+services:
+  - service: pentest
+    product:
+      - test
+    source:
+      - src/
+
+# Example: Services and Code Relationship 
+# Note: Do not use below. It is just an example 
+# Note: Directory paths are relative to the repository's root directory
+#- service: paymentservice
+#  source:
+#     - src/payments 
+#     - src/checkout_service
+#- service: catalogservice
+#  source:
+#     - src/catalog 
+
+
+# Source Directories to Exclude
+# Purpose: Configuration is used to exclude directories from analysis
+# Note: Directory paths are relative to the repository's root directory
